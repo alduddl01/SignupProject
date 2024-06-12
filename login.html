@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/main.js" defer></script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+    <br />
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+    <br />
+    <button id="loginButton">Login</button>
+    <div id="responseMessage"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loginButton = document.getElementById("loginButton");
+        loginButton.addEventListener("click", async () => {
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          try {
+            const response = await axios.post("/login", { username, password });
+            document.getElementById("responseMessage").textContent =
+              response.data.message;
+          } catch (error) {
+            console.error(error);
+            document.getElementById("responseMessage").textContent =
+              "An error occurred";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
