@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <!-- 부트스트랩 CSS 파일 포함 -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/main.js" defer></script>
+    <style>
+      #responseMessage.hide {
+        display: none;
+      }
+      #viewProfileBtn {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h4 class="mb-4 text-center">Login</h4>
+          <form>
+            <div class="form-group">
+              <label for="username">아이디</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">비밀번호</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                required
+              />
+            </div>
+            <div class="form-group text-center">
+              <button type="button" id="loginBtn" class="btn btn-primary">
+                로그인
+              </button>
+              <button
+                type="button"
+                id="viewProfileBtn"
+                class="btn btn-secondary"
+              >
+                회원정보 조회
+              </button>
+              <button type="button" id="signupBtn" class="btn btn-success">
+                회원가입
+              </button>
+            </div>
+            <div
+              id="responseMessage"
+              class="alert alert-info hide mt-3"
+              role="alert"
+            ></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- 부트스트랩 JS 파일 포함 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

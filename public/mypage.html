@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/main.js" defer></script>
+    <style>
+      #responseMessage.hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h4 class="mb-4 text-center">회원 정보 수정</h4>
+          <form>
+            <div class="form-group">
+              <label for="userId">아이디</label>
+              <input
+                type="text"
+                class="form-control"
+                id="userId"
+                name="userId"
+                readonly
+              />
+            </div>
+            <div class="form-group">
+              <label for="nickname">닉네임</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nickname"
+                name="nickname"
+              />
+            </div>
+            <div class="form-group">
+              <label for="userName">이름</label>
+              <input
+                type="text"
+                class="form-control"
+                id="userName"
+                name="userName"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phonenumber">휴대전화</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phonenumber"
+                name="phonenumber"
+              />
+            </div>
+            <div class="form-group text-center">
+              <button type="button" id="updateBtn" class="btn btn-primary">
+                회원정보 수정
+              </button>
+            </div>
+            <div
+              id="responseMessage"
+              class="alert alert-info hide"
+              role="alert"
+            ></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- 부트스트랩 JS 파일 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
