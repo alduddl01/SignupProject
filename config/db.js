@@ -1,28 +1,10 @@
 var mysql = require("mysql2/promise");
-
-// var config =  mysql.createPool({
-//     host     : 'db.wofhddl.gabia.io',
-//     user     : 'wofhddl',
-//     password : 'ahffktkd0!',
-//     database : 'dbwofhddl',
-//     connectionLimit : 30
-// });
-
 var config = mysql.createPool({
   host: "192.168.0.101",
   user: "traveler",
   password: "1212",
   database: "dasol",
   connectionLimit: 30,
-});
-// var config =  mysql.createPool({
-//   host     : 'db.happylife.gabia.io',
-//   user     : 'happylife',
-//   password : 'whitegymmng!!!!',
-//   database : 'dbhappylife',
-//   connectionLimit : 30
-// });
-
 //쿼리문
 
 // module.exports.SqlQuery = (QueryString,callback) =>{
